@@ -1,0 +1,45 @@
+body {
+    background-color: #09090A;
+    color: white;
+}
+
+.playground {
+    margin:auto;
+    width:50%;
+    text-align: center;
+    
+
+}
+
+.content {
+    margin:auto;
+    width:90%;
+    text-align:center;
+    /* position:relative; */
+}
+
+.tooltip {
+    width: 120px;
+    background-color:aliceblue;
+    color: #09090A;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* positon tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 72px;
+    left: 949px;
+}
+
+.tooltip::after {
+    content: " ";
+    position:absolute;
+    top:100%; /* at the bottom of the tooltip */
+    left: 50%; 
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: aliceblue transparent transparent transparent;
+}
