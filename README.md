@@ -131,7 +131,7 @@ try {
     // Continue processing remaining tasks
 }
 ```
-
+<!-- 
 ## 🧪 Testing
 
 The implementation includes comprehensive test coverage:
@@ -147,26 +147,7 @@ console.log(p.state); // 'pending' initially, then 'fulfilled'
 p.then(x => x.toUpperCase())
  .then(x => x + '!')
  .then(console.log); // 'TEST!'
-```
-
-## 🔧 Usage
-
-### Direct Import
-```javascript
-import { Promise as MyPromise } from './Promise.js';
-
-const promise = new MyPromise((resolve, reject) => {
-    // Your async code here
-});
-```
-
-### Shadow Global Promise
-```javascript
-import { Promise } from './Promise.js';
-
-// Now all Promise usage uses your implementation
-const promise = new Promise(resolve => resolve("Custom!"));
-```
+``` -->
 
 ## 📖 Educational Value
 
@@ -253,35 +234,9 @@ Each implementation in this playground follows these principles:
 4. **Test extensively** - Verify behavior matches expected patterns
 5. **Progressive complexity** - Build understanding layer by layer
 
-## 📋 Promise API Reference
-
-### Constructor
-```javascript
-new Promise(executor: (resolve, reject) => void)
-```
-
-### Instance Methods
-```javascript
-.then(onFulfilled?, onRejected?) // Promise chaining
-.catch(onRejected)              // Error handling
-.finally(onFinally)             // Cleanup operations
-```
-
-### Static Methods
-```javascript
-Promise.all(promises)          // Wait for all to fulfill
-Promise.allSettled(promises)   // Wait for all to settle
-Promise.any(promises)          // First to fulfill wins
-Promise.race(promises)         // First to settle wins
-Promise.resolve(value)         // Create fulfilled promise
-Promise.reject(reason)         // Create rejected promise
-Promise.try(fn, ...args)       // Wrap sync/async functions
-Promise.withResolvers()        // External resolve/reject control
-```
-
-## 🔍 Implementation Details
-
 ### Key Features Implemented
+
+Promise
 
 - ✅ **Promise/A+ compliance** - Follows the official specification
 - ✅ **Thenable interoperability** - Works with other Promise libraries
@@ -329,4 +284,4 @@ This is a personal learning playground, but feel free to:
 - Share your own implementations for comparison
 - Use this as inspiration for your own learning projects
 
-**Remember**: The goal is understanding, not just working code! 🧠✨
+**Remember**: The goal is understanding, not just working code, ya feel me? 🧠✨
