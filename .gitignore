@@ -1,0 +1,284 @@
+# ================================
+# NODE.JS / NPM
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.npm
+.yarn-integrity
+
+# ================================
+# BUILD OUTPUTS
+# ================================
+dist/
+build/
+out/
+.output/
+.vercel/
+.netlify/
+public/build/
+*.min.js
+*.min.css
+*.bundle.js
+*.chunk.js
+
+# ================================
+# ENVIRONMENT & CONFIG
+# ================================
+.env
+.env.*
+!.env.example
+.config/
+.cache/
+.temp/
+.tmp/
+
+# ================================
+# DEVELOPMENT TOOLS
+# ================================
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Parcel
+.parcel-cache/
+
+# Vite
+.vite/
+
+# Webpack
+.webpack/
+
+# Rollup
+.rollup.cache/
+
+# SvelteKit
+.svelte-kit/
+
+# Next.js
+.next/
+
+# Nuxt.js
+.nuxt/
+
+# Gatsby
+.cache/
+public/
+
+# Vue
+.vue/
+
+# ================================
+# TESTING & COVERAGE
+# ================================
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+test-report/
+screenshots/
+
+# ================================
+# LOGS
+# ================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ================================
+# RUNTIME DATA
+# ================================
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ================================
+# TYPESCRIPT
+# ================================
+*.tsbuildinfo
+.tscache/
+
+# ================================
+# LINTING & FORMATTING
+# ================================
+.eslintcache
+.stylelintcache
+.prettiercache
+
+# ================================
+# OS GENERATED FILES
+# ================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# MEDIA FILES (LARGE TEST FILES)
+# ================================
+# Video files - uncomment if you don't want large test videos in repo
+# *.mp4
+# *.mov
+# *.avi
+# *.webm
+# *.mkv
+# *.m4v
+# *.flv
+# *.wmv
+
+# Audio files
+# *.mp3
+# *.wav
+# *.ogg
+# *.flac
+# *.m4a
+
+# Image files (large ones)
+# *.psd
+# *.ai
+# *.eps
+
+# ================================
+# PROJECT SPECIFIC
+# ================================
+# Demo/test content directories
+demo-videos/
+test-videos/
+sample-media/
+large-files/
+
+# Documentation builds
+docs/_build/
+docs/.vitepress/dist/
+docs/.vuepress/dist/
+
+# Playground specific temp folders
+experiments/temp/
+playground-temp/
+scratch/
+
+# ================================
+# SECURITY
+# ================================
+# API keys and secrets
+.secrets
+secrets.json
+*.key
+*.pem
+*.crt
+*.p12
+
+# ================================
+# MISC
+# ================================
+# Optional: Uncomment if you have these patterns
+# Backup files
+# *.bak
+# *.backup
+# *.orig
+
+# Archive files
+# *.zip
+# *.tar.gz
+# *.rar
+# *.7z
+
+# Database files
+# *.db
+# *.sqlite
+# *.sqlite3
+
+# Python (if you have any Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Ruby (if you have any Ruby tools)
+*.gem
+*.rbc
+/.bundle/
+/vendor/bundle/
+/lib/bundler/man/
+
+# PHP (if you have any PHP)
+/vendor/
+composer.lock
+
+# Rust (if you have any Rust/WASM)
+/target/
+Cargo.lock
+
+# Go (if you have any Go tools)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/vendor/
+
+# ================================
+# COMMENTS FOR FUTURE REFERENCE
+# ================================
+# Add project-specific ignores below this line:
+# /specific-project/build/
+# /another-project/*.generated.js

@@ -1,0 +1,51 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "A hands-on learning environment for understanding and re-implementing complex JavaScript systems from scratch. This playground focuses on building deep understanding by recreating fundamental JavaScript APIs and patterns.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+   "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    
+    "dev:best-player": "vite --config vite.best-player.config.js",
+    "build:best-player": "vite build --config vite.best-player.config.js",
+    "preview:best-player": "vite preview --config vite.best-player.config.js",
+    
+    "dev:async-queue": "vite --config vite.async-queue.config.js",
+    "build:async-queue": "vite build --config vite.async-queue.config.js",
+    "preview:async-queue": "vite preview --config vite.async-queue.config.js",
+    
+    "dev:Promise": "vite --config vite.Promise.config.js",
+    "build:Promise": "vite build --config vite.Promise.config.js",
+    "preview:Promise": "vite preview --config vite.Promise.config.js",
+    
+    "build:all": "npm run build:best-player && npm run build:async-queue && npm run build:Promise",
+    "clean": "rimraf dist",
+    "create-project": "node scripts/create-project.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazyskateface/playground.git"
+  },
+  "keywords": [
+    "javascript",
+    "learning",
+    "webcodecs",
+    "promises",
+    "playground"
+  ],
+  "author": "Travdogdev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crazyskateface/playground/issues"
+  },
+  "homepage": "https://github.com/crazyskateface/playground#readme",
+  "devDependencies": {
+    "vite": "^7.0.2"
+  },
+  "dependencies": {
+    "rimraf": "^6.0.1"
+  }
+}

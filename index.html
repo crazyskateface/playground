@@ -1,22 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>playground</title>
-    <script src="index.js" type="module"></script>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 JavaScript Learning Playground</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .projects {
+            display: grid;
+            gap: 20px;
+        }
+        .project-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .project-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .btn-primary {
+            background: #007acc;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #005a99;
+        }
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+    </style>
 </head>
 <body>
-    
-    <main class="playground">
-        <h2>Playground</h2>
+    <div class="header">
+        <h1>🚀 JavaScript Learning Playground</h1>
+        <p>Custom implementations of complex JavaScript systems for deep learning</p>
+    </div>
 
-        <div class="content">
-            <input type="text" default="bro" value="" />
-            <button id="button_1" name="button_1" onmouseenter="javascript:addTooltip(event)" onmouseout="javascript:clearTooltip()">add tooltip</button>
+    <div class="projects">
+        <div class="project-card">
+            <div class="project-title">
+                <h2>📺 BestPlayer</h2>
+            </div>
+            <p>Custom video player built from scratch using WebCodecs API. Includes MP4 parsing, frame-by-frame rendering, and custom controls.</p>
+            <div class="project-links">
+                <a href="/src/best-player/" class="btn btn-primary">🎬 Open Project</a>
+                <a href="https://github.com/your-repo" class="btn btn-secondary">📂 Source Code</a>
+            </div>
         </div>
-    </main>
 
+        <div class="project-card">
+            <div class="project-title">
+                <h2>⚡ Custom Promise</h2>
+            </div>
+            <p>Complete Promise/A+ specification implementation with all static methods, thenable handling, and modern utilities.</p>
+            <div class="project-links">
+                <a href="/src/Promise/" class="btn btn-primary">🔗 Open Project</a>
+                <a href="https://github.com/your-repo" class="btn btn-secondary">📂 Source Code</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-title">
+                <h2>📋 Async Queue</h2>
+            </div>
+            <p>Sequential task processing system with error isolation, priority handling, and comprehensive event system.</p>
+            <div class="project-links">
+                <a href="/src/async-queue/" class="btn btn-primary">📊 Open Project</a>
+                <a href="https://github.com/your-repo" class="btn btn-secondary">📂 Source Code</a>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
