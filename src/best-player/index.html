@@ -19,12 +19,32 @@
         <div class="content">
             <h1> Best Player</h1>
             <h4> Custom video player with webcodecs api</h4>
-            <best-player></best-player>
+            <best-player src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></best-player>
         </div>
     </main>
 
 
     <script src="./components/BestPlayer.js" type="module"></script>
+    <script type="text/javascript">
+        // different ways of loading a video into the best-player
+
+        
+        // const player = document.querySelector('best-player');
+        // player.src = 'https://example.com/video.mp4';
+
+        // const player = document.querySelector('best-player');
+        // player.setAttribute('src', 'https://example.com/video.mp4');
+
+
+        //dynamic updates
+        // Load video after page load
+        // document.getElementById('myPlayer').src = 'https://example.com/video.mp4';
+
+        // Change video later
+        // setTimeout(() => {
+        //     document.getElementById('myPlayer').src = 'https://example.com/another-video.mp4';
+        // }, 5000);
+    </script>
 </body>
 
 </html>

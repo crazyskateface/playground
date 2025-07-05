@@ -35,9 +35,43 @@ class BestPlayer extends HTMLElement {
         this.animationId = null;
     }
 
+    static get observedAttributes() {
+        return ['src'];
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+        if (name === 'src' && newValue && newValue !== oldValue) {
+            // Only load if the component is already connected and initialized
+            if (this.isConnected && this.canvas) {
+                this.loadVideoFromUrl(newValue);
+            } else {
+                // Store the URL to load after initialization
+                this._pendingSrc = newValue;
+            }
+        }
+    }
+
+    get src() {
+        return this.getAttribute('src');
+    }
+
+    set src(value) {
+        if (value) {
+            this.setAttribute('src', value);
+        } else {
+            this.removeAttribute('src');
+        }
+    }
+
     connectedCallback() {
         this.render();
         this.initialize();
+
+        // Load pending src if it was set before initialization
+        if (this._pendingSrc) {
+            this.loadVideoFromUrl(this._pendingSrc);
+            this._pendingSrc = null;
+        }
     }
 
     disconnectedCallback() {
@@ -215,6 +249,12 @@ class BestPlayer extends HTMLElement {
 
         this.setupEventListeners();
         this.initializeWebCodecs();
+
+        // check for src attribute on initialization
+        const src = this.getAttribute('src');
+        if (src) {
+            this.loadVideoFromUrl(src);
+        }
     }
 
     setupEventListeners() {
@@ -232,7 +272,7 @@ class BestPlayer extends HTMLElement {
         loadUrlBtn.addEventListener('click', () => {
             const url = urlInput.value.trim();
             if (url) {
-                this.loadVideoFromUrl(url);
+                this.src = url;
             }
         });
 
@@ -255,12 +295,14 @@ class BestPlayer extends HTMLElement {
         // Preset URLs
         preset1.addEventListener('click', () => {
             urlInput.value = 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
-            loadUrlBtn.click();
+            urlInput.value = url;
+            this.src = url;
         });
         
         preset2.addEventListener('click', () => {
             urlInput.value = 'https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4';
-            loadUrlBtn.click();
+            urlInput.value = url;
+            this.src = url; 
         });
 
         playBtn.addEventListener('click', () => {
