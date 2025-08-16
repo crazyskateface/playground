@@ -16,10 +16,11 @@ export default defineConfig({
   build: {
     rollupOptions: {
         input: {
-            main: resolve(__dirname, 'index.html'),
+main: resolve(__dirname, 'index.html'),
             'best-player': resolve(__dirname, 'src/best-player/index.html'),
             'async-queue': resolve(__dirname, 'src/async-queue/index.html'),
             'custom-promise': resolve(__dirname, 'src/Promise/index.html'),
+            '3dcss': resolve(__dirname, 'src/3dcss/index.html'),
         }
     }
   },

@@ -5,25 +5,24 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-   "dev": "vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    
     "dev:best-player": "vite --config vite.best-player.config.js",
     "build:best-player": "vite build --config vite.best-player.config.js",
     "preview:best-player": "vite preview --config vite.best-player.config.js",
-    
     "dev:async-queue": "vite --config vite.async-queue.config.js",
     "build:async-queue": "vite build --config vite.async-queue.config.js",
     "preview:async-queue": "vite preview --config vite.async-queue.config.js",
-    
     "dev:Promise": "vite --config vite.Promise.config.js",
     "build:Promise": "vite build --config vite.Promise.config.js",
     "preview:Promise": "vite preview --config vite.Promise.config.js",
-    
     "build:all": "npm run build:best-player && npm run build:async-queue && npm run build:Promise",
     "clean": "rimraf dist",
-    "create-project": "node scripts/create-project.js"
+    "create-project": "node scripts/create-project.js",
+    "dev:3dcss": "vite --config vite.3dcss.config.js",
+    "build:3dcss": "vite build --config vite.3dcss.config.js",
+    "preview:3dcss": "vite preview --config vite.3dcss.config.js"
   },
   "repository": {
     "type": "git",
